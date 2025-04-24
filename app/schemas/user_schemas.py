@@ -41,6 +41,7 @@ class UserCreate(UserBase):
     email: EmailStr = Field(..., example="john.doe@example.com")
     # username: str = Field(..., min_length=3, pattern=r'^[\w-]+$', example="john_doe123")
     password: str = Field(..., example="Secure*1234")
+    email_verified: Optional[bool] = Field(None, example=True)
 
 class UserUpdate(UserBase):
     email: Optional[EmailStr] = Field(None, example="john.doe@example.com")
@@ -51,6 +52,7 @@ class UserUpdate(UserBase):
     profile_picture_url: Optional[str] = Field(None, example="https://example.com/profiles/john.jpg")
     linkedin_profile_url: Optional[str] =Field(None, example="https://linkedin.com/in/johndoe")
     github_profile_url: Optional[str] = Field(None, example="https://github.com/johndoe")
+    email_verified: Optional[bool] = Field(None, example=True)
 
     @root_validator(pre=True)
     def check_at_least_one_value(cls, values):
