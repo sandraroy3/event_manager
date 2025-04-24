@@ -39,6 +39,7 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     email: EmailStr = Field(..., example="john.doe@example.com")
+    # username: str = Field(..., min_length=3, pattern=r'^[\w-]+$', example="john_doe123")
     password: str = Field(..., example="Secure*1234")
 
 class UserUpdate(UserBase):
