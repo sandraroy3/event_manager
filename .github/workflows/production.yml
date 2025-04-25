@@ -72,7 +72,7 @@ jobs:
           push: true
           tags: sandraroy3/event_manager:${{ github.sha }} # Uses the Git SHA for tagging
           platforms: linux/amd64,linux/arm64 # Multi-platform support
-          cache-from: type=registry,ref=sandraroy3/event_manager:latest
+          cache-from: type=registry,ref=sandraroy3/event_manager:cache
           cache-to: type=inline,mode=max
           
       - name: Scan the Docker image
