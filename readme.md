@@ -32,7 +32,7 @@ Fix tests
 
 # [DockerHub Deployment](https://hub.docker.com/repository/docker/sandraroy3/event_manager)
 
-- Dockerhub Image
+- Dockerhub Image - https://hub.docker.com/r/sandraroy3/event_manager
 ![DOCKERHUB IMAGE](images/Event_manager-docker_img.png)
 
 # Reflection on Learning
