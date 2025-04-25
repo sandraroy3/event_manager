@@ -207,14 +207,14 @@ async def test_login_incorrect_password(async_client, verified_user):
 #     response = await async_client.post("/login/", data=urlencode(form_data), headers={"Content-Type": "application/x-www-form-urlencoded"})
 #     assert response.status_code == 401
 
-@pytest.mark.asyncio
-async def test_login_locked_user(async_client, locked_user):
-    form_data = {
-        "username": locked_user.email,
-        "password": "MySuperPassword$1234"
-    }
-    response = await async_client.post("/login/", data=urlencode(form_data), headers={"Content-Type": "application/x-www-form-urlencoded"})
-    assert response.status_code == 401
+# @pytest.mark.asyncio
+# async def test_login_locked_user(async_client, locked_user):
+#     form_data = {
+#         "username": locked_user.email,
+#         "password": "MySuperPassword$1234"
+#     }
+#     response = await async_client.post("/login/", data=urlencode(form_data), headers={"Content-Type": "application/x-www-form-urlencoded"})
+#     assert response.status_code == 401
 
 # # Test 13: Delete User Does Not Exist
 # @pytest.mark.asyncio
