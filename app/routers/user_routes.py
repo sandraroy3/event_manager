@@ -195,6 +195,10 @@ logger = logging.getLogger(__name__)
 @router.post("/register/", response_model=UserResponse, tags=["Login and Registration"])
 async def register(user_data: UserCreate, session: AsyncSession = Depends(get_db), email_service: EmailService = Depends(get_email_service)):
     user = await UserService.register_user(session, user_data.model_dump())
+    try:
+        user = await UserService.register_user(session, user_data.model_dump(), email_service)
+    except ValueError as e:
+        print(f"Validation Error: {e}")
     if user:
         return user
     raise HTTPException(status_code=400, detail="Email already exists")
