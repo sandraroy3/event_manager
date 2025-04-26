@@ -1,6 +1,6 @@
-# [My github repository linK](https://github.com/sandraroy3/event_manager)
+# [My github repository](https://github.com/sandraroy3/event_manager)
 
-This Readme tracks known issues encountered during the development and testing of the Event Manager HW 10 project, along with their corresponding solutions.
+This Readme tracks known issues identified during the development and testing of the HW 10 project - Event Manager, along with their corresponding solutions and what I learnt.
 
 # Issues and solution
 
