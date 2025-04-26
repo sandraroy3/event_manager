@@ -70,7 +70,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: sandraroy3/event_manager:$latest # Uses the Git SHA for tagging
+          tags: sandraroy3/event_manager:latest # Uses the Git SHA for tagging
           platforms: linux/amd64,linux/arm64 # Multi-platform support
           cache-from: type=registry,ref=sandraroy3/event_manager:cache
           cache-to: type=inline,mode=max
